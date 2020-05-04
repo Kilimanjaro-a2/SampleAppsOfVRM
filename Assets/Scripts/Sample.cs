@@ -5,6 +5,13 @@ using UnityEngine;
 using UnityEngine.Networking;
 using VRM;
 
+/*
+ * You have to attch this script to GameObject named "Scripts"
+ * because the FileImporterPlugin uses the name "Scripts" as a clue when calling the callback.
+ *
+ * このスクリプトはシーン上の"Scripts"という名前のついたGameObjectにアタッチしてください。
+ * FileImporterPlugin.jslibの中で、"Scripts"と名のつくGameObjectに対してコールバックの呼び出しを行っているためです。
+*/ 
 public class Sample : MonoBehaviour
 {
     [DllImport("__Internal")]
@@ -13,7 +20,7 @@ public class Sample : MonoBehaviour
     public void OnButtonClicked()
     {
         #if UNITY_EDITOR
-            Debug.Log("WebGLビルドで試してください");
+            Debug.Log("This script doesn't support Unity Editor. Try on WebGL Build instead.");
         #elif UNITY_WEBGL
             FileImporterCaptureClick();
         #endif
@@ -32,7 +39,7 @@ public class Sample : MonoBehaviour
 
             if (webRequest.isNetworkError)
             {
-                Debug.LogError("ネットワークエラー");
+                Debug.LogError("NetworkError");
             }
             else
             {
