@@ -21,6 +21,7 @@ public class VRMLoadManager : MonoBehaviour
     [DllImport("__Internal")]
     protected static extern void FileImporterCaptureClick();
     public event Action<GameObject> OnModelLoaded;
+    public event Action<VRMMetaObject> OnMetaDataLoaded;
     public void OnLoadButtonClicked()
     {
         #if UNITY_EDITOR
@@ -72,16 +73,20 @@ public class VRMLoadManager : MonoBehaviour
             model.name = meta.Title;
             
             context.ShowMeshes();
-            OnLoaded(model);
+            OnLoaded(model, meta);
             
         } catch(Exception e) {
             Debug.LogError(e);
         }
     }
 
-    protected virtual void OnLoaded(GameObject model)
+    protected virtual void OnLoaded(GameObject model, VRMMetaObject meta = null)
     {
         Debug.Log(model + "has been loaded");
         OnModelLoaded?.Invoke(model);
+        if (meta != null)
+        {
+            OnMetaDataLoaded?.Invoke(meta);
+        }
     }
 }
