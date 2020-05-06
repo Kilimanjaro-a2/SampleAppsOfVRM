@@ -1,5 +1,4 @@
-# VRMサンプルアプリ集
-
+# VRM Sample Collection
 
 [日本語版README](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/README.md)
 
