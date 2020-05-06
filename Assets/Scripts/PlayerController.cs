@@ -1,9 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public event Action OnDead;
     protected Animator _animator;
     protected readonly float _moveSpeed = 10f;
     protected readonly float _moveLimitX = 4;
@@ -80,8 +81,6 @@ public class PlayerController : MonoBehaviour
             pos.x = -_moveLimitX;
             transform.position = pos;
         }
-
-
     }
 
     public void SetAnimatorController(RuntimeAnimatorController rac)
@@ -100,6 +99,7 @@ public class PlayerController : MonoBehaviour
 
     protected IEnumerator OnDamagedCoroutine()
     {
+        OnDead?.Invoke();
         _isDead = true;
         transform.eulerAngles = new Vector3(0, 180, 0);
         transform.Translate(Vector3.back * 1f);
