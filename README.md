@@ -7,7 +7,7 @@
 
 VRMを使ったアプリのサンプル集です。
 
-WebGL向けにビルドすることを想定しています。
+UnityからWebGL向けにビルドすることを想定しています。
 
 ## Demo
 WebGLでビルドされたデモです。
@@ -24,10 +24,10 @@ Unity Editorのバージョンは2019.3.9f1を想定しています。
 
 プロジェクトの中には、VRMを使ったアプリで使用されることが想定される6つのシーンを用意してあります
 
-1. VRMをダイアログから読み込むシーン
+1. VRMをファイルダイアログから読み込むシーン
 https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss1.PNG
 
-2. VRMをダイアログから読み込むシーン（複数に対応）
+2. VRMをファイルダイアログから読み込むシーン（複数に対応）
 https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss2.PNG
 
 3. 表情を変更するシーン
@@ -73,4 +73,5 @@ UnityのWebGLビルドは、マルチスレッディングに対応していな�
 `VRMImporterContext.LoadAsync(`)は使用できなさそうです。
 
 マルチスレッディングを使用しないようスクリプトを書き換えることで、非同期読み込みに対応できますが、パフォーマンスは悪くなります。
-このプロジェクトでは同期的な読み込みのみ対応しています
+
+このプロジェクトでは同期的な読み込みのみ対応しています。
