@@ -22,14 +22,20 @@ public class VRMLoadManager : MonoBehaviour
     protected static extern void FileImporterCaptureClick();
     public event Action<GameObject> OnModelLoaded;
     public event Action<VRMMetaObject> OnMetaDataLoaded;
+    
     public void OnLoadButtonClicked()
     {
         #if UNITY_EDITOR
-            var url = Application.dataPath + "/SampleModel/Sample.vrm";
-            StartCoroutine(LoadJson(url));
+            OnSampleLoadButtonClicked();
         #elif UNITY_WEBGL
             FileImporterCaptureClick();
         #endif
+    }
+
+    public void OnSampleLoadButtonClicked()
+    {
+        var url = Application.dataPath + "/SampleModel/Sample.vrm";
+        FileSelected(url);
     }
 
     /*
