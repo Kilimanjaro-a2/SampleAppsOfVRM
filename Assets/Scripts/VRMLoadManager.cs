@@ -26,7 +26,8 @@ public class VRMLoadManager : MonoBehaviour
     public void OnLoadButtonClicked()
     {
         #if UNITY_EDITOR
-            OnSampleLoadButtonClicked();
+            var url = Application.dataPath + "/SampleModel/Sample.vrm";
+            FileSelected(url);
         #elif UNITY_WEBGL
             FileImporterCaptureClick();
         #endif
@@ -34,8 +35,8 @@ public class VRMLoadManager : MonoBehaviour
 
     public void OnSampleLoadButtonClicked()
     {
-        var url = Application.dataPath + "/SampleModel/Sample.vrm";
-        FileSelected(url);
+        var model = Instantiate(Resources.Load("Sample")) as GameObject;
+        OnLoaded(model);
     }
 
     /*
