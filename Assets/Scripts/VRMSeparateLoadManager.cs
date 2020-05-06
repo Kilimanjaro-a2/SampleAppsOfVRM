@@ -1,44 +1,47 @@
 ﻿using UnityEngine;
 
-public class VRMSeparateLoadManager : VRMLoadManager
+namespace KiliWare.SampleVRMApp
 {
-    protected GameObject _leftInstantiatedVRM;
-    protected GameObject _rightInstantiatedVRM;
-    public void OnLeftSelectButtonClicked()
+    public class VRMSeparateLoadManager : VRMLoadManager
     {
-        OnModelLoaded += OnLeftVRMSelected;
-        OnLoadButtonClicked();
-    }
-
-    public void OnRightSelectButtonClicked()
-    {
-        OnModelLoaded += OnRightVRMSelected;
-        OnLoadButtonClicked();
-    }
-
-    protected void OnLeftVRMSelected(GameObject model)
-    {
-        OnModelLoaded -= OnLeftVRMSelected;
-        Debug.Log("Left VRM has been loaded");
-        model.transform.position = new Vector3(1, 0, 0);
-
-        if (_leftInstantiatedVRM)
+        protected GameObject _leftInstantiatedVRM;
+        protected GameObject _rightInstantiatedVRM;
+        public void OnLeftSelectButtonClicked()
         {
-            Destroy(_leftInstantiatedVRM);
+            OnModelLoaded += OnLeftVRMSelected;
+            OnLoadButtonClicked();
         }
-        _leftInstantiatedVRM = model;
-    }
 
-    protected void OnRightVRMSelected(GameObject model)
-    {
-        OnModelLoaded -= OnRightVRMSelected;
-        Debug.Log("Right VRM has been loaded");
-        model.transform.position = new Vector3(-1, 0, 0);
-
-        if (_rightInstantiatedVRM)
+        public void OnRightSelectButtonClicked()
         {
-            Destroy(_rightInstantiatedVRM);
+            OnModelLoaded += OnRightVRMSelected;
+            OnLoadButtonClicked();
         }
-        _rightInstantiatedVRM = model;
+
+        protected void OnLeftVRMSelected(GameObject model)
+        {
+            OnModelLoaded -= OnLeftVRMSelected;
+            Debug.Log("Left VRM has been loaded");
+            model.transform.position = new Vector3(1, 0, 0);
+
+            if (_leftInstantiatedVRM)
+            {
+                Destroy(_leftInstantiatedVRM);
+            }
+            _leftInstantiatedVRM = model;
+        }
+
+        protected void OnRightVRMSelected(GameObject model)
+        {
+            OnModelLoaded -= OnRightVRMSelected;
+            Debug.Log("Right VRM has been loaded");
+            model.transform.position = new Vector3(-1, 0, 0);
+
+            if (_rightInstantiatedVRM)
+            {
+                Destroy(_rightInstantiatedVRM);
+            }
+            _rightInstantiatedVRM = model;
+        }
     }
 }

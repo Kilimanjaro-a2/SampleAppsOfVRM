@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System;
 
-public class PlayerColliderController : MonoBehaviour
+namespace KiliWare.SampleVRMApp
 {
-    public event Action OnEnemyCollided;
-    protected void OnTriggerEnter(Collider col)
+    public class PlayerColliderController : MonoBehaviour
     {
-        if(col.gameObject.tag == "Enemy")
+        public event Action OnEnemyCollided;
+        protected void OnTriggerEnter(Collider col)
         {
-            OnEnemyCollided?.Invoke();
+            if(col.gameObject.tag == "Enemy")
+            {
+                OnEnemyCollided?.Invoke();
+            }
         }
     }
 }

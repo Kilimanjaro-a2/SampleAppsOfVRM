@@ -1,32 +1,35 @@
 ﻿using UnityEngine;
 
-public class TransformControllerRegister : MonoBehaviour
+namespace KiliWare.SampleVRMApp
 {
-    [SerializeField]
-    protected float _rotationSpeed = 10;
-    [SerializeField]
-    protected float _moveSpeed = 10;
-
-    void Awake()
+    public class TransformControllerRegister : MonoBehaviour
     {
-        var manager = GetComponent<VRMLoadManager>();
-        manager.OnModelLoaded += RegisterController;
-    }
+        [SerializeField]
+        protected float _rotationSpeed = 10;
+        [SerializeField]
+        protected float _moveSpeed = 10;
 
-    protected void RegisterController(GameObject loadedModel)
-    {
-        if (loadedModel == null)
+        void Awake()
         {
-            Debug.LogError("The loaded model is null");
-            return;
+            var manager = GetComponent<VRMLoadManager>();
+            manager.OnModelLoaded += RegisterController;
         }
 
-        if (loadedModel.GetComponent<TransformController>() != null)
+        protected void RegisterController(GameObject loadedModel)
         {
-            return;
+            if (loadedModel == null)
+            {
+                Debug.LogError("The loaded model is null");
+                return;
+            }
+
+            if (loadedModel.GetComponent<TransformController>() != null)
+            {
+                return;
+            }
+            
+            var controller = loadedModel.AddComponent<TransformController>();
+            controller.SetSpeed(rotation: _rotationSpeed, move: _moveSpeed);
         }
-        
-        var controller = loadedModel.AddComponent<TransformController>();
-        controller.SetSpeed(rotation: _rotationSpeed, move: _moveSpeed);
     }
 }

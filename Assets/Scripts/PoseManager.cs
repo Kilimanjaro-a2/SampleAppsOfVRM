@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoseManager : MonoBehaviour
+namespace KiliWare.SampleVRMApp
 {
-    [SerializeField] protected List<Animator> _animators;
-    
-    public void OnAnimationButtonPressed(string poseName)
+    public class PoseManager : MonoBehaviour
     {
-        foreach(var anim in _animators)
+        [SerializeField] protected List<Animator> _animators;
+        
+        public void OnAnimationButtonPressed(string poseName)
         {
-            anim.SetTrigger(poseName);
+            foreach(var anim in _animators)
+            {
+                anim.SetTrigger(poseName);
+            }
         }
     }
 }

@@ -1,20 +1,23 @@
 ﻿using UnityEngine;
 
-public class DescriptionUIManager : MonoBehaviour
+namespace KiliWare.SampleVRMApp
 {
-    [SerializeField] protected GameObject _description;
-    protected GameObject _instantiated;
-    void Awake()
+    public class DescriptionUIManager : MonoBehaviour
     {
-        var loadingManager = GetComponent<VRMLoadManager>();
-        loadingManager.OnModelLoaded += EnableDescription;
-    }
-    protected void EnableDescription(GameObject _)
-    {
-        if (_description == null)
+        [SerializeField] protected GameObject _description;
+        protected GameObject _instantiated;
+        void Awake()
         {
-            return;
+            var loadingManager = GetComponent<VRMLoadManager>();
+            loadingManager.OnModelLoaded += EnableDescription;
         }
-        _description.SetActive(true);
+        protected void EnableDescription(GameObject _)
+        {
+            if (_description == null)
+            {
+                return;
+            }
+            _description.SetActive(true);
+        }
     }
 }

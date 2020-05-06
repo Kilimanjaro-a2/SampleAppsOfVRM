@@ -3,18 +3,21 @@ using UnityEngine;
 using VRM;
 using UnityEngine.UI;
 
-public class FacialExpressionButtonController : MonoBehaviour
+namespace KiliWare.SampleVRMApp
 {
-    public BlendShapePreset Preset;
-    public event Action<BlendShapePreset> OnFacialExpressionButtonPressed;
-
-    public void SetText(string text)
+    public class FacialExpressionButtonController : MonoBehaviour
     {
-        GetComponentInChildren<Text>().text = text;
-    }
+        public BlendShapePreset Preset;
+        public event Action<BlendShapePreset> OnFacialExpressionButtonPressed;
 
-    public void OnButtonPressed()
-    {
-        OnFacialExpressionButtonPressed?.Invoke(Preset);
+        public void SetText(string text)
+        {
+            GetComponentInChildren<Text>().text = text;
+        }
+
+        public void OnButtonPressed()
+        {
+            OnFacialExpressionButtonPressed?.Invoke(Preset);
+        }
     }
 }
