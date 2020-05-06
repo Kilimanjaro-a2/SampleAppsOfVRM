@@ -43,7 +43,15 @@ https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots
 https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss6.PNG
 
 # Others
-WebGLビルドで詰まりがちな部分
+
+## 使用したアセット
+
+プロジェクト内で使用しているVRMはVRoid Studioより出力したものです。
+
+https://vroid.com/studio
+
+
+## WebGLビルドで詰まりがちな部分
 
 - VRMの読み込みがうまくいかない！
 

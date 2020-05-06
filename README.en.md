@@ -45,7 +45,13 @@ https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots
 
 # Others
 
-Parts that tend to get stuck in WebGL builds
+## Assets
+
+The VRM used in the project is output from VRoid Studio.
+
+https://vroid.com/studio
+
+## Tips of the WebGL builds
 
 - VRM loading does not work!
 
