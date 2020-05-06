@@ -1,7 +1,7 @@
 # VRMサンプルアプリ集
 
 
-[English version of this file](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/README.en.md)
+[English version of this file](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/README.en.md)
 
 ## Description
 
@@ -12,7 +12,7 @@ UnityからWebGL向けにビルドすることを想定しています。
 ## Demo
 WebGLでビルドされたデモです。
 
-https://kilimanjaro-a2.github.io/VRMAppWebGLBuildSample/
+https://kilimanjaro-a2.github.io/SampleAppsOfVRM/
 
 ## Usage
 プロジェクトをダウンロードしてUnity Editorで開いてください。
@@ -25,22 +25,22 @@ Unity Editorのバージョンは2019.3.9f1を想定しています。
 プロジェクトの中には、VRMを使ったアプリで使用されることが想定される6つのシーンを用意してあります
 
 1. VRMをファイルダイアログから読み込むシーン
-![ss1](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss1.PNG)
+![ss1](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss1.PNG)
 
 2. VRMをファイルダイアログから読み込むシーン（複数に対応）
-![ss2](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss2.PNG)
+![ss2](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss2.PNG)
 
 3. 表情を変更するシーン
-![ss3](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss3.PNG)
+![ss3](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss3.PNG)
 
 4. ポーズ・アニメーションを変更するシーン
-![ss4](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss4.PNG)
+![ss4](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss4.PNG)
 
 5. メタ情報を表示するシーン
-![ss5](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss5.PNG)
+![ss5](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss5.PNG)
 
 6. シンプルなゲーム
-![ss6](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss6.PNG)
+![ss6](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss6.PNG)
 
 # Others
 

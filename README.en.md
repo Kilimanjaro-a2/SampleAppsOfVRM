@@ -1,6 +1,6 @@
 # VRM Sample Collection
 
-[日本語版README](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/README.md)
+[日本語版README](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/README.md)
 
 ## Description
 
@@ -11,7 +11,7 @@ It is supposed to be built for WebGL by Unity.
 ## Demo
 This is a demo built with WebGL.
 
-https://kilimanjaro-a2.github.io/VRMAppWebGLBuildSample/
+https://kilimanjaro-a2.github.io/SampleAppsOfVRM/
 
 ## Usage
 
@@ -25,22 +25,22 @@ The project uses Unity Editor version 2019.3.9f1, but you can use any version yo
 In the project, we have prepared 6 scenes that are expected to be used in apps using VRM.
 
 1. Scene to load VRM from file dialog
-![ss1](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss1.PNG)
+![ss1](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss1.PNG)
 
 2. Scene to load multiple VRMs from file dialog
-![ss2](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss2.PNG)
+![ss2](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss2.PNG)
 
 3. Scene to change the facial expression of the model
-![ss3](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss3.PNG)
+![ss3](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss3.PNG)
 
 4. Scene to change the poses of the model
-![ss4](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss4.PNG)
+![ss4](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss4.PNG)
 
 5. Scene to view meta data
-![ss5](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss5.PNG)
+![ss5](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss5.PNG)
 
 6. Simple Game
-![ss6](https://github.com/Kilimanjaro-a2/VRMAppWebGLBuildSample/blob/master/ScreenShots/ss6.PNG)
+![ss6](https://github.com/Kilimanjaro-a2/SampleAppsOfVRM/blob/master/ScreenShots/ss6.PNG)
 
 
 # Others
